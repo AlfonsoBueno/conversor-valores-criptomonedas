@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de criptomonedas</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <h1>Conversor a criptomonedas</h1>
+
+    <div class="contenedor">
+        <div class="panel panel--izquierdo"  id="js-panelizquierdo">
+            <div class="panel--izquierdo__contenedor">
+
+                <select id="moneda">
+                    <option  value="euros" selected>Euros</option>
+                    <option value="dolares">Dólares</option>
+                </select>
+
+                <input type="number" value="" id="cantidad-moneda" maxlength = "14">
+
+
+
+            </div>
+        </div>
+
+        <div class="panel panel--derecho" id="js-panelderecho">
+            <div class="panel--derecho__contenedor">
+                    
+                <div class="valor-cripto">
+                    <img src="./images/btc.png" class="icono-cripto">
+                    <div class="nombre--cripto">Bitcoin (BTC)</div>
+                    <div class="cripto-convertida" id=""></div>
+                </div>
+                
+                <div class="valor-cripto">
+                    <img src="./images/eth.png" class="icono-cripto">
+                    <div class="nombre--cripto">Ethereum (ETH)</div>
+                    <div class="cripto-convertida" id=""> </div>
+                </div>
+
+                <div class="valor-cripto">
+                    <img src="./images/ada.png" class="icono-cripto">
+                    <div class="nombre--cripto">Cardano (ADA)</div>
+                    <div class="cripto-convertida" id=""></div>
+                </div>
+
+                <div class="valor-cripto">
+                    <img src="./images/xrp.png" class="icono-cripto">
+                    <div class="nombre--cripto">XRP (XRP)</div>
+                    <div class="cripto-convertida" id=""></div>
+                </div>
+
+                <div class="valor-cripto">
+                    <img src="./images/usdt.png" class="icono-cripto">
+                    <div class="nombre--cripto">Tether (USDT)</div>
+                    <div class="cripto-convertida" id=""></div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://kit.fontawesome.com/1c44cb9844.js" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>    
+</body>
+</html>

@@ -1,0 +1,419 @@
+/* Color izquierdo: #0079b2
+Color derecho: #edf1f4 */
+
+*{
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+h1{
+    position: absolute;
+    top: 90vh;
+    left: 25px;
+    font-size: 1.2rem;
+    color:#fff;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px;
+    border:3px solid #fff;
+    z-index: 999;
+}
+
+.contenedor{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.panel{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-size: 5rem;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+/* Panel izquiero */
+.panel.panel--izquierdo{
+    background-color: #2d62fd;
+    background-image: url('./images/fondo.png');
+    /* background-size:cover; */
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+}
+
+.panel--izquierdo__contenedor{
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+}
+
+
+#moneda{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding: 10px;
+    color:#fff;
+    border-radius:4px 0px 0px 4px;
+    text-align: center;
+    appearance: none;
+    background-color: #6ab8fd;
+    outline: none;
+}
+
+
+
+#cantidad-moneda{
+    padding: 10px;
+    text-align: right;
+    font-size: 2rem;
+    border: 0;
+    flex-grow: 1;
+    outline: none;
+    border-radius:0px 4px 4px 0px;
+
+}
+
+
+/* Panel derecho */
+.panel.panel--derecho{
+    position: relative;
+    background-color: #deefff;
+    background-position: 0 2%;
+    background-image: url('./images/fondo1.png');
+    background-repeat: no-repeat;
+    /* background-size: contain; */
+    overflow: hidden;
+
+}
+
+.panel--derecho__contenedor{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* Para que parezca más centrado */
+    padding-left: 30px;
+}
+
+
+.valor-cripto{
+    position: relative;
+    margin-bottom: 30px;
+ 
+}
+
+.valor-cripto .nombre--cripto {
+    
+    position: absolute;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #888;
+    bottom: 10px;
+    right: 1px;
+    margin: 0;
+    padding: 0;
+    color: #f7931b;
+    opacity: 0.7;
+}
+
+.icono-cripto{
+    position: absolute;
+    width: 70px;
+    top: -6px;
+    left: -13px;
+}
+
+.cripto-convertida{
+    background-color: #fff;
+    padding: 10px 10px 10px 60px;
+    min-height: 56px;
+    max-height: 56px;
+    text-align: right;
+    font-size: 2rem;
+    border: 0;
+    flex-grow: 1;
+    outline: none;
+    border-radius:4px 4px 4px 4px;
+    margin-bottom: 30px;
+    width: 100%;
+    appearance:none;
+
+}
+
+
+
+@media only screen and (max-width: 1000px) {    
+
+    
+/* Panel izquiero */
+.panel.panel--izquierdo{
+   overflow: hidden;
+   height: auto;
+}
+
+.panel--izquierdo__contenedor{
+    width: 95%;
+    padding: 65px 0 35px;
+    
+}
+
+#moneda{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding: 10px;
+    color:#fff;
+    border-radius:4px 0px 0px 4px;
+    text-align: center;
+    appearance: none;
+    background-color: #6ab8fd;
+    outline: none;
+}
+
+
+#cantidad-moneda{
+    width: 100%;
+    padding: 10px;
+    text-align: right;
+    font-size: 2rem;
+    border: 0;
+    flex-grow:2;
+    outline: none;
+    border-radius:0px 4px 4px 0px;
+
+}
+
+
+/* Panel derecho */
+.panel.panel--derecho{
+    overflow: auto;
+
+}
+
+.panel--derecho__contenedor{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* Para que parezca más centrado */
+    padding-left: 0px;
+}
+
+
+
+.valor-cripto{
+    position: relative;
+    margin-bottom: 20px;
+ 
+}
+
+.valor-cripto .nombre--cripto {
+    position: absolute;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #888;
+    bottom: 10px;
+    right: 1px;
+    margin: 0;
+    padding: 0;
+    color: #f7931b;
+    opacity: 0.7;
+}
+
+.icono-cripto{
+    position: absolute;
+    width: 39px;
+    top: 10px;
+    left: 5px;
+    opacity: 0.6;
+}
+
+.cripto-convertida{
+    background-color: #fff;
+    padding: 8px 8px 8px 50px;
+    min-height: 56px;
+    max-height: 56px;
+    max-width: 100%;
+    text-align: right;
+    font-size: 2rem;
+    border: 0;
+    flex-grow: 1;
+    outline: none;
+    border-radius:4px 4px 4px 4px;
+    margin-bottom: 30px;
+    width: 100%;
+    appearance:none;
+
+}
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {    
+    body{
+        overflow: auto;
+    }
+
+    h1{
+        width: 100%;
+        font-size: 1rem;
+        padding: 8px;
+        top:0px;
+        left: 0px;
+        background-color: #000;
+        color:#fff;
+        border-color: #000;
+        opacity: 0.9;
+    }
+
+    .contenedor{
+        width: 100vw;
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        flex-direction: column;
+    }
+
+    .panel{
+        width: 100vw;
+        font-size: 5rem;
+        text-transform: uppercase;
+        overflow: auto;
+    }
+    
+
+
+/* Panel izquiero */
+.panel.panel--izquierdo{
+   overflow: hidden;
+   height: auto;
+}
+
+.panel--izquierdo__contenedor{
+    width: 95%;
+    padding: 65px 0 35px;
+    
+}
+
+#moneda{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding: 10px;
+    color:#fff;
+    border-radius:4px 0px 0px 4px;
+    text-align: center;
+    appearance: none;
+    background-color: #6ab8fd;
+    outline: none;
+}
+
+
+#cantidad-moneda{
+    width: 100%;
+    padding: 10px;
+    text-align: right;
+    font-size: 2rem;
+    border: 0;
+    flex-grow:2;
+    outline: none;
+    border-radius:0px 4px 4px 0px;
+
+}
+
+
+/* Panel derecho */
+.panel.panel--derecho{
+    overflow: auto;
+
+}
+
+.panel--derecho__contenedor{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* Para que parezca más centrado */
+    padding-left: 0px;
+}
+
+
+
+.valor-cripto{
+    position: relative;
+    margin-bottom: 20px;
+ 
+}
+
+.valor-cripto .nombre--cripto {
+    position: absolute;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #888;
+    bottom: 10px;
+    right: 1px;
+    margin: 0;
+    padding: 0;
+    color: #f7931b;
+    opacity: 0.7;
+}
+
+.icono-cripto{
+    position: absolute;
+    width: 39px;
+    top: 10px;
+    left: 5px;
+    opacity: 0.6;
+}
+
+.cripto-convertida{
+    background-color: #fff;
+    padding: 8px 8px 8px 50px;
+    min-height: 56px;
+    max-height: 56px;
+    max-width: 100%;
+    text-align: right;
+    font-size: 2rem;
+    border: 0;
+    flex-grow: 1;
+    outline: none;
+    border-radius:4px 4px 4px 4px;
+    margin-bottom: 30px;
+    width: 100%;
+    appearance:none;
+
+}
+    
+
+}
